@@ -1,0 +1,21 @@
+.design{
+   
+    
+    max-width: 1100px;
+    max-height: 495px;
+    background-image: url(./img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    //justify-content: center;
+    align-items: center;
+/* text-align: center;
+  background-size: 500% 500%;*/
+}
+.title {
+    text-align: center;
+    margin-top: 50px;
+   height: 5px;
+   margin: 0px;
+   padding: 0px;
+   }

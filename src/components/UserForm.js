@@ -3,17 +3,21 @@ import FormUserDetails from './FormUserDetails';
 import FormPersonalDetails from './FormPersonalDetails';
 import Confirm from './Confirm';
 import Success from './Success';
+import SuccessN from './SuccessN';
+import Ifelse from './Ifelse';
 
 export class UserForm extends Component {
     state = 
+    
     {
         step: 1,
-        firstName: '',
-        lastName: '',
-        email: '',
-        occupation: '',
-        city: '',
-        bio: '',
+        Name: '',
+        age: '',
+        TravellingFrom: '',
+        ArrivalDate: '',
+        PresentAddress: '',
+        Symptoms: '',
+        BloodTest: '',
 
     }
     //proceed to next step
@@ -33,11 +37,12 @@ export class UserForm extends Component {
     {
         this.setState({[input]: e.target.value});
     }
+    
     render() 
     {
         const { step } = this.state;
-        const { firstName, lastName, email, occupation, city,bio } = this.state;
-        const values = { firstName, lastName, email, occupation, city, bio }
+        const { Name, age, TravellingFrom, ArrivalDate, PresentAddress, Symptoms, BloodTest  } = this.state;
+        const values = {Name, age, TravellingFrom, ArrivalDate, PresentAddress, Symptoms, BloodTest }
         switch(step) 
         {
             case 1:
@@ -62,13 +67,16 @@ export class UserForm extends Component {
                         <Confirm
                         nextStep= {this.nextStep}
                         prevStep= {this.prevStep}
-                        
-                        values= {values}
+                        values= { values } 
                         />
                     )
                 case 4:
                     return(
-                        <Success /> 
+                        <Ifelse 
+                        handleChange= {this.handleChange}
+                        BloodTest={this.BloodTest}
+                        values= { values }
+                        /> 
                     )
         }
       

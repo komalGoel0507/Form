@@ -24,7 +24,7 @@ const muiTheme = getMuiTheme({
 
 
 
-export class Success extends Component {
+export class SuccessN extends Component {
    
   
     render() {
@@ -34,10 +34,10 @@ export class Success extends Component {
                 <React.Fragment>
                 <AppBar title ="Success"  style={{ backgroundColor: '#B61B1B', }} />
                 <div class="design">
-                  <br/>
-                <h1>Corona Test - Negative.</h1>
+               <br/>
+                <h1>Corona Test - Positive.</h1>
                 <h1>Thank you for your Patience! </h1>
-                <h2>Still you need to be on 15 days self Isolation.</h2>
+                <h2>You need to be on 15 days Quarantine.</h2>
                 <br/>
                 <br/>
                 <br/>
@@ -51,15 +51,7 @@ export class Success extends Component {
                 <br/>
                 <br/>
                 <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <br/>>
                 <br/>
                 </div>
                 </React.Fragment>
@@ -69,4 +61,4 @@ export class Success extends Component {
 }
 
 
-export default Success;
+export default SuccessN;
