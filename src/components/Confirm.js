@@ -7,6 +7,7 @@ import * as Colors from 'material-ui/styles/colors';
 import {white, darkWhite} from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './design.css'
+import vid4 from './video/vid4.mp4';
 import Divider from 'material-ui/Divider';
 const muiTheme = getMuiTheme({
   palette: {
@@ -43,26 +44,41 @@ export class Confirm extends Component {
                 <MuiThemeProvider>
 
                 <React.Fragment>
-                <AppBar title = "A.I.I.M.S"  style={{ backgroundColor: '#B61B1B', }} />
-                <div className="design">
+                <AppBar title = "A.I.I.M.S"  style={{ backgroundColor: '#3e2723', }} />
+                <div className="design2">
+                <video autoPlay loop muted
+                  style={{
+                  position: "absolute",
+                  width:"100%",
+                  left: "50%",
+                  top: "60%",
+                  height: "190%",
+                  objectFit: "cover",
+                  transform: "translate(-50%,-50%)",
+                  zindex: "-1"
+                  }}>
+                    <source src={vid4} type="video/mp4"/>
+                  </video>
                <List> 
                    <ListItem
                    
                    primaryText =  {<span style={{color: white}}>Name</span> }
                    listStyle ={{color:'white'}}
+                   style={{left: 490,  }}
                    //insetChildren={true}
                   secondaryText =  { <span style={{color: white}}> <br/>{Name}</span> }
                   
                    />
                   
                      <ListItem
+                     style={{left: 490,  }}
                       // insetChildren={true}
                    primaryText =  {<span style={{color: white}}>Age</span> }
                    secondaryText = { <span style={{color: white}}> <br/>{age}</span> }
                    />
                     
                      <ListItem
-                    //  style={{left: 15  }}
+                     style={{left: 490,  }}
                     //insetChildren={true}
                    primaryText =  {<span style={{color: white}}>Traveeling From</span> }
                    secondaryText = { <span style={{color: white}}> <br/>{TravellingFrom}</span> }
@@ -70,29 +86,34 @@ export class Confirm extends Component {
                      <ListItem
                      
                    //            insetChildren={true}
+                   style={{left: 490,  }}
                    primaryText =  {<span style={{color: white}}>Arrival Date</span> }
                    secondaryText =  { <span style={{color: white}}> <br/>{ArrivalDate}</span> }
                    /> 
                      <ListItem
                       // insetChildren={true}
+                      style={{left: 490,  }}
                    primaryText = {<span style={{color: white}}>Present Address</span> }
                    secondaryText =  { <span style={{color: white}}> <br/>{PresentAddress}</span> }
                    /> 
                      <ListItem
                      //  insetChildren={true}
+                     style={{left: 490,  }}
                    primaryText =  {<span style={{color: white}}>Symptoms</span> }
                    secondaryText =  { <span style={{color: white}}> <br/>{Symptoms}</span> }
                    /> 
                    
                    <ListItem 
                    //  insetChildren={true}
+                   style={{left: 490,  }}
                    
-                   primaryText =  {<span style={{color: white}}>Blood Test</span> }
+                   primaryText =  {<span style={{color: white, }}>Blood Test</span> }
                    secondaryText = { <span style={{color: white}}> <br/>{BloodTest}</span> }
                    /> 
                </List>
                <Divider/>
                <RaisedButton
+                style={{left: 490,  }}
                 label="Confirm & Continue"
                 Primary={true}
                 styles={styles.button}
@@ -101,6 +122,7 @@ export class Confirm extends Component {
                 <RaisedButton
                 
                 label="Back"
+                style={{left: 490,  }}
                 Primary={false}
                 styles={styles.button}
                 onClick={this.back}
@@ -113,10 +135,10 @@ export class Confirm extends Component {
             }
 }
 const styles = { 
-    button: {
-             margin:20 
-             
-            }
-               }
+  button: {
+    left: 490
+           
+          }
+             }
 
 export default Confirm;

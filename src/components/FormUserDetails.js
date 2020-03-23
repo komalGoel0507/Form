@@ -3,7 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import * as Colors from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
+import vid from './video/vid.mp4'
+import {white, blue900,Grey900} from 'material-ui/styles/colors';
 import './design.css'
 
 
@@ -12,14 +13,10 @@ import RaisedButton from 'material-ui/RaisedButton';
 const muiTheme = getMuiTheme({
     palette: {
       textColor: Colors.darkBlack,
-     // primary1Color: Colors.white,
-      //primary2Color: Colors.indigo700,
-      //accent1Color: Colors.redA200,
-     // pickerHeaderColor: Colors.blue400,
+
     },
-    appBar: {
-      height: 5,
-    },
+    
+
   });
 export class FormUserDetails extends Component {
     continue = e => {
@@ -31,8 +28,22 @@ export class FormUserDetails extends Component {
               return (
                 <MuiThemeProvider /*muiTheme={muiTheme}*/>
                 <React.Fragment>
-              <AppBar title = "Enter Your Details" style={{ backgroundColor: '#B61B1B', }} />
+              <AppBar title = "Enter Your Details" style={{backgroundColor: '#3d5afe',}} />
                 <div className="design">
+                  <video autoPlay loop muted
+                  style={{
+                  position: "absolute",
+                  width:"100%",
+                  left: "50%",
+                  top: "60%",
+                  height: "190%",
+                  objectFit: "cover",
+                  transform: "translate(-50%,-50%)",
+                  zindex: "-1"
+                  }}>
+                    <source src={vid} type="video/mp4"/>
+                  </video>
+    
                 <br/>
                 <TextField 
                  hintText = " Enter Your Name."
@@ -83,6 +94,10 @@ export class FormUserDetails extends Component {
                 onClick={this.continue}
                 
                 />
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <br/>
                 <br/>
                 <br/>

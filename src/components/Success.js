@@ -32,8 +32,8 @@ export class Success extends Component {
               return (
                 <MuiThemeProvider>
                 <React.Fragment>
-                <AppBar title ="Success"  style={{ backgroundColor: '#B61B1B', }} />
-                <div class="design">
+                <AppBar title ="Success"  style={{ backgroundColor: '#E57373', }} />
+                <div class="design3">
                   <br/>
                 <h1>Corona Test - Negative.</h1>
                 <h1>Thank you for your Patience! </h1>

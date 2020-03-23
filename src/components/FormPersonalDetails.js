@@ -5,19 +5,14 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import * as Colors from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import vid2 from './video/vid2.mp4'
 import './design.css';
-
 const muiTheme = getMuiTheme({
   palette: {
     textColor: Colors.darkBlack,
-    primary1Color: Colors.white,
-    //primary2Color: Colors.indigo700,
-    //accent1Color: Colors.redA200,
     pickerHeaderColor: Colors.pink500,
    },
-  /*appBar: {
-    height: 25,
-  },*/
+
 });
 export class FormPersonalDetails extends Component {
     continue = e => {
@@ -35,8 +30,21 @@ export class FormPersonalDetails extends Component {
               return (
                 <MuiThemeProvider>
                 <React.Fragment>
-                <AppBar title = "Enter Personal Details"  style={{ backgroundColor: '#B61B1B', }}  />
-                <div className="design">
+                <AppBar title = "Enter Personal Details"  style={{ backgroundColor: '#e53935', }}/>
+                <div className="design1">
+                <video autoPlay loop muted
+                  style={{
+                  position: "absolute",
+                  width:"100%",
+                  left: "50%",
+                  top: "60%",
+                  height: "190%",
+                  objectFit: "cover",
+                  transform: "translate(-50%,-50%)",
+                  zindex: "-1"
+                  }}>
+                    <source src={vid2} type="video/mp4"/>
+                  </video>
                 <br/>
                 <br/>
                 <TextField 
